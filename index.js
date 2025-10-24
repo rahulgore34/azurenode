@@ -4,7 +4,10 @@ const app = express();
 const port = process.env.PORT|| 3000;
 app.use(cors());
 app.get('/', (req, res) => {
-  res.send('Hello World test123');
+  res.json({
+    message: 'Hello World from Azure Node.js App!',
+    status: 'Success'
+  });
 });
 
 app.listen(port, () => {
